@@ -1,6 +1,6 @@
-# **🏰 Brusque Quest: Uma Jornada pela História e Cultura 🥨**
+# **🏰 A História de Brusque 🥨**
 
-Bem-vindo ao **Brusque Quest**\! Este é um projeto lúdico desenvolvido para celebrar e ensinar sobre a rica história da "Cidade dos Tecidos". Se você é um explorador curioso ou um desenvolvedor iniciante, este guia foi feito para você.
+Bem-vindo ao **A História de Brusque**\! Este é um projeto lúdico desenvolvido durante a semana da curricularização da Unifebe em parceria com a prefeitura de Brusque para celebrar e ensinar sobre a rica história da "Cidade dos Tecidos". Se você é um explorador curioso ou um desenvolvedor iniciante, este guia foi feito para você.
 
 ## **📖 Menu de Introdução: Sobre o Projeto**
 
@@ -16,8 +16,8 @@ Nesta seção, você conhece os responsáveis por esta expedição e os portais 
 
 ### **🔗 Portais Úteis**
 
-* **Repositório do Código (GitHub):** Link para o repositório (substitua pelo link real).  
-* **Jogue Agora (GitHub Pages):** Link para a página publicada (substitua pelo link real).
+* **Repositório do Código (GitHub):** [Link para o repositório](https://github.com/ygorVolstein/jogo_prefeitura).  
+* **Jogue Agora (GitHub Pages):** [Link para a página publicada](link aqui).
 
 ## **🛠️ Organização Técnica: O Mapa da Semana**
 
