@@ -1,0 +1,11 @@
+# Claude Code interno
+.claude/
+
+# Arquivos de trabalho do Figma (referências locais)
+figma_dump.json
+figma_screens/
+
+# Sistema
+Thumbs.db
+.DS_Store
+*.log
