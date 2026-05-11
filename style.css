@@ -1,0 +1,122 @@
+/* ===== TOKENS DE COR (extensões do Bootstrap) ===== */
+:root {
+  --brusque-brown: #6b4423;
+  --brusque-yellow: #f4c430;
+}
+
+/* Background com céu */
+.bg-sky {
+  background: linear-gradient(180deg, #87ceeb 0%, #98d8a8 100%);
+}
+
+/* Texto marrom (extensão do Bootstrap) */
+.text-brown { color: var(--brusque-brown) !important; }
+
+/* Fonte infantil */
+body {
+  font-family: 'Comic Sans MS', 'Comic Neue', system-ui, sans-serif;
+}
+
+/* ===== CARD COM ASPECTO DE QUADRO DE MADEIRA ===== */
+.game-card {
+  background: var(--brusque-yellow);
+  border: 8px solid var(--brusque-brown) !important;
+  border-radius: 24px !important;
+}
+
+/* ===== TRANSIÇÃO ENTRE TELAS ===== */
+.screen { display: none; animation: fadeIn .3s ease; }
+.screen.active { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== BOTÕES DE ALTERNATIVA ===== */
+.option-btn {
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s, border-color .2s, background .2s;
+}
+
+.option-btn:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .2) !important;
+  border-color: #198754 !important; /* bootstrap success */
+}
+
+.option-btn:disabled { cursor: default; }
+
+.option-btn.correct {
+  border-color: #198754 !important;
+  background: #d1e7dd !important;
+}
+
+.option-btn.wrong {
+  border-color: #dc3545 !important;
+  background: #f8d7da !important;
+}
+
+/* ===== IMAGENS DAS ALTERNATIVAS ===== */
+.option-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+.img-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #f0f0f0, #d0d0d0);
+  border-radius: .375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #6c757d;
+}
+
+/* ===== COLETA: input-group arredondado ===== */
+.coleta-row {
+  border-radius: 50rem;
+  overflow: hidden;
+}
+
+.coleta-row .input-group-text {
+  border-top-left-radius: 50rem !important;
+  border-bottom-left-radius: 50rem !important;
+  padding-left: 1.25rem;
+}
+
+.coleta-row .form-control {
+  border-top-right-radius: 50rem !important;
+  border-bottom-right-radius: 50rem !important;
+}
+
+.coleta-row .form-control:focus {
+  box-shadow: 0 0 0 .2rem rgba(244, 196, 48, .4);
+}
+
+/* ===== ESTRELAS ===== */
+.star {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, .4);
+  transition: color .3s, transform .3s;
+}
+
+.star.filled {
+  color: var(--brusque-yellow);
+  text-shadow: 0 2px 8px rgba(244, 196, 48, .6);
+  animation: starPop .4s ease;
+}
+
+@keyframes starPop {
+  0%   { transform: scale(0); }
+  60%  { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* ===== BOTÃO PRÓXIMA (escondido até responder) ===== */
+#btn-next { display: none; }
+#btn-next.visible { display: inline-flex; }
