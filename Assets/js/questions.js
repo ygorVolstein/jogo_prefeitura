@@ -148,3 +148,5 @@ const questions = [
     correct: "B"
   }
 ];
+
+const rndQuestions = questions.sort(() => 0.5 - Math.random());
