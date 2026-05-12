@@ -135,21 +135,10 @@ function selectOption(chosenId) {
   const btnChosen = chosenId === 'A' ? optionA : optionB;
   const btnCorrect = q.correct === 'A' ? optionA : optionB;
 
-  btnChosen.classList.add(isCorrect ? 'correct' : 'wrong');
-  if (!isCorrect) btnCorrect.classList.add('correct');
+
 
   optionA.disabled = true;
   optionB.disabled = true;
-
-  if (isCorrect) {
-    feedbackIcon.textContent = '✅';
-    feedbackText.textContent = 'Muito bem! Resposta correta!';
-    feedbackEl.className = 'alert alert-success d-flex align-items-center gap-2 py-2 mb-3';
-  } else {
-    feedbackIcon.textContent = '💡';
-    feedbackText.textContent = 'Quase! A resposta certa está em verde.';
-    feedbackEl.className = 'alert alert-warning d-flex align-items-center gap-2 py-2 mb-3';
-  }
 
   btnNext.classList.add('visible');
   btnNext.textContent = currentIndex + 1 < questions.length ? 'Próxima →' : 'Ver resultado';
