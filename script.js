@@ -64,13 +64,8 @@ function startGame() {
   const school = inputSchool.value.trim();
   const age    = inputAge.value.trim();
 
-  if (!name || !school || !age) {
-    coletaError.classList.remove('d-none');
-    return;
-  }
-
   player = { name, school, age };
-  coletaError.classList.add('d-none');
+  coletaError.classList.add('d-none'); // Garante que qualquer mensagem de erro antiga fique escondida
 
   currentIndex = 0;
   score = 0;
