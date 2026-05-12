@@ -5,37 +5,37 @@ let answered = false;
 let player = { name: '', school: '', age: '' };
 
 // ===== DOM REFS =====
-const screenStart   = document.getElementById('screen-start');
-const screenColeta  = document.getElementById('screen-coleta');
-const screenQuiz    = document.getElementById('screen-quiz');
-const screenResult  = document.getElementById('screen-result');
+const screenStart = document.getElementById('screen-start');
+const screenColeta = document.getElementById('screen-coleta');
+const screenQuiz = document.getElementById('screen-quiz');
+const screenResult = document.getElementById('screen-result');
 
 // Coleta
-const inputName    = document.getElementById('player-name');
-const inputSchool  = document.getElementById('player-school');
-const inputAge     = document.getElementById('player-age');
-const coletaError  = document.getElementById('coleta-error');
+const inputName = document.getElementById('player-name');
+const inputSchool = document.getElementById('player-school');
+const inputAge = document.getElementById('player-age');
+const coletaError = document.getElementById('coleta-error');
 
 // Quiz
-const progressFill  = document.getElementById('progress-fill');
+const progressFill = document.getElementById('progress-fill');
 const progressLabel = document.getElementById('progress-label');
-const scoreLabel    = document.getElementById('score-label');
-const questionText  = document.getElementById('question-text');
-const optionA       = document.getElementById('option-a');
-const optionB       = document.getElementById('option-b');
-const imgA          = document.getElementById('img-a');
-const imgB          = document.getElementById('img-b');
-const labelA        = document.getElementById('label-a');
-const labelB        = document.getElementById('label-b');
-const feedbackEl    = document.getElementById('feedback');
-const feedbackIcon  = document.getElementById('feedback-icon');
-const feedbackText  = document.getElementById('feedback-text');
-const btnNext       = document.getElementById('btn-next');
+const scoreLabel = document.getElementById('score-label');
+const questionText = document.getElementById('question-text');
+const optionA = document.getElementById('option-a');
+const optionB = document.getElementById('option-b');
+const imgA = document.getElementById('img-a');
+const imgB = document.getElementById('img-b');
+const labelA = document.getElementById('label-a');
+const labelB = document.getElementById('label-b');
+const feedbackEl = document.getElementById('feedback');
+const feedbackIcon = document.getElementById('feedback-icon');
+const feedbackText = document.getElementById('feedback-text');
+const btnNext = document.getElementById('btn-next');
 
 // Resultado
-const resultTitle    = document.getElementById('result-title');
+const resultTitle = document.getElementById('result-title');
 const resultGreeting = document.getElementById('result-greeting');
-const resultScore    = document.getElementById('result-score');
+const resultScore = document.getElementById('result-score');
 const resultSubtitle = document.getElementById('result-subtitle');
 const starsContainer = document.getElementById('stars-container');
 
@@ -60,12 +60,17 @@ function goToColeta() {
 
 // ===== COLETA + INÍCIO DO QUIZ =====
 function startGame() {
-  const name   = inputName.value.trim();
+  const name = inputName.value.trim();
   const school = inputSchool.value.trim();
-  const age    = inputAge.value.trim();
+  const age = inputAge.value.trim();
+
+  if (!name || !school || !age) {
+    coletaError.classList.remove('d-none');
+    return;
+  }
 
   player = { name, school, age };
-  coletaError.classList.add('d-none'); // Garante que qualquer mensagem de erro antiga fique escondida
+  coletaError.classList.add('d-none');
 
   currentIndex = 0;
   score = 0;
@@ -87,8 +92,8 @@ function loadQuestion() {
   feedbackEl.className = 'alert d-none';
   btnNext.classList.remove('visible');
 
-  const q = questions[currentIndex];
-  const total = questions.length;
+  const q = rndQuestions[currentIndex];
+  const total = rndQuestions.length;
   const progress = (currentIndex / total) * 100;
 
   progressFill.style.width = progress + '%';
@@ -124,7 +129,7 @@ function selectOption(chosenId) {
   if (answered) return;
   answered = true;
 
-  const q = questions[currentIndex];
+  const q = rndQuestions[currentIndex];
   const isCorrect = chosenId === q.correct;
 
   if (isCorrect) {
@@ -132,7 +137,7 @@ function selectOption(chosenId) {
     scoreLabel.textContent = `Acertos: ${score}`;
   }
 
-  const btnChosen  = chosenId === 'A' ? optionA : optionB;
+  const btnChosen = chosenId === 'A' ? optionA : optionB;
   const btnCorrect = q.correct === 'A' ? optionA : optionB;
 
   btnChosen.classList.add(isCorrect ? 'correct' : 'wrong');
@@ -168,11 +173,11 @@ function nextQuestion() {
 function calculateStars(correct, total) {
   // Mapeia % de acerto em 0 a 5 estrelas
   const pct = correct / total;
-  if (pct >= 0.9)  return 5;
+  if (pct >= 0.9) return 5;
   if (pct >= 0.75) return 4;
-  if (pct >= 0.5)  return 3;
-  if (pct >= 0.3)  return 2;
-  if (pct > 0)     return 1;
+  if (pct >= 0.5) return 3;
+  if (pct >= 0.3) return 2;
+  if (pct > 0) return 1;
   return 0;
 }
 

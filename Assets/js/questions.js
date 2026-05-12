@@ -14,137 +14,139 @@
 const questions = [
   {
     id: 1,
-    question: "Qual é o animalzinho muito simpático que é a mascote da nossa festa mais famosa, a Fenarreco?",
+    question: "Qual imagem representa uma ação sustentável?",
     options: [
-      { id: "A", image: "Assets/images/Pergunta1a.png", label: "Um marreco (que parece um patinho)." },
-      { id: "B", image: "Assets/images/Pergunta1b.png", label: "Um leão feroz." }
+      { id: "A", image: "images/q1_a.jpg", label: "Jogar lixo no chão" },
+      { id: "B", image: "images/q1_b.jpg", label: "Separar o lixo para reciclagem" }
     ],
-    correct: "A"
+    correct: "B"
   },
   {
     id: 2,
-    question: "Tem um rio bem grande que passa no meio da nossa cidade de Brusque. Você sabe como ele se chama?",
+    question: "Qual é o símbolo da prefeitura de Brusque?",
     options: [
-      { id: "A", image: "Assets/images/Pergunta2a.png", label: "Rio Itajaí-Mirim." },
-      { id: "B", image: "Assets/images/Pergunta2b.png", label: "Rio de Leite com Chocolate." }
+      { id: "A", image: "images/q2_a.jpg", label: "Brasão oficial de Brusque" },
+      { id: "B", image: "images/q2_b.jpg", label: "Brasão de outra cidade" }
     ],
     correct: "A"
   },
   {
     id: 3,
-    question: "Onde nós podemos ir em Brusque para passear no meio das árvores e ver vários animais de verdade?",
+    question: "Qual serviço é oferecido pela prefeitura?",
     options: [
-      { id: "A", image: "Assets/images/Pergunta3a.jpg", label: "No supermercado." },
-      { id: "B", image: "Assets/images/Pergunta3b.jpg", label: "No Parque Zoobotânico." }
-    ],
-    correct: "B"
-  },
-  {
-    id: 4,
-    question: "A cidade de Brusque é muito famosa por ter fábricas enormes que fazem muitas...",
-    options: [
-      { id: "A", image: "Assets/images/Pergunta4a.png", label: "Naves espaciais para ir à Lua." },
-      { id: "B", image: "Assets/images/Pergunta4b.png", label: "Roupas, tecidos e fios." }
-    ],
-    correct: "B"
-  },
-  {
-    id: 5,
-    question: "Há muito, muito tempo, as primeiras famílias que vieram morar em Brusque chegaram de quê?",
-    options: [
-      { id: "A", image: "Assets/images/Pergunta5a.png", label: "De navio e de barco pelo rio." },
-      { id: "B", image: "Assets/images/Pergunta5b.png", label: "De disco voador." }
+      { id: "A", image: "images/q3_a.jpg", label: "Serviço A" },
+      { id: "B", image: "images/q3_b.jpg", label: "Serviço B" }
     ],
     correct: "A"
   },
   {
-    id: 6,
-    question: "A Igreja Matriz de Brusque, que fica lá no centro, tem uma coisa muito grande na frente dela para as pessoas subirem. O que é?",
+    id: 4,
+    question: "Pergunta 4",
     options: [
-      { id: "A", image: "Assets/images/Pergunta6a.png", label: "Uma escadaria bem alta." },
-      { id: "B", image: "Assets/images/Pergunta6b.png", label: "Um escorregador gigante." }
+      { id: "A", image: "images/q4_a.jpg", label: "Alternativa A" },
+      { id: "B", image: "images/q4_b.jpg", label: "Alternativa B" }
+    ],
+    correct: "A"
+  },
+  {
+    id: 5,
+    question: "Pergunta 5",
+    options: [
+      { id: "A", image: "images/q5_a.jpg", label: "Alternativa A" },
+      { id: "B", image: "images/q5_b.jpg", label: "Alternativa B" }
+    ],
+    correct: "B"
+  },
+  {
+    id: 6,
+    question: "Pergunta 6",
+    options: [
+      { id: "A", image: "images/q6_a.jpg", label: "Alternativa A" },
+      { id: "B", image: "images/q6_b.jpg", label: "Alternativa B" }
     ],
     correct: "A"
   },
   {
     id: 7,
-    question: "Na festa da Fenarreco, as pessoas gostam de se vestir com roupas especiais chamadas trajes típicos. Como eles são?",
+    question: "Pergunta 7",
     options: [
-      { id: "A", image: "Assets/images/Pergunta7a.png", label: "Roupas de Fritz e Frida, com chapéus e suspensórios." },
-      { id: "B", image: "Assets/images/Pergunta7b.png", label: "Roupas de mergulho para nadar." }
+      { id: "A", image: "images/q7_a.jpg", label: "Alternativa A" },
+      { id: "B", image: "images/q7_b.jpg", label: "Alternativa B" }
     ],
-    correct: "A"
+    correct: "B"
   },
   {
     id: 8,
-    question: "Qual desses animais nós podemos encontrar brincando e pulando no Parque Zoobotânico de Brusque?",
+    question: "Pergunta 8",
     options: [
-      { id: "A", image: "Assets/images/Pergunta8a.png", label: "O Macaco." },
-      { id: "B", image: "Assets/images/Pergunta8b.png", label: "O Dinossauro." }
+      { id: "A", image: "images/q8_a.jpg", label: "Alternativa A" },
+      { id: "B", image: "images/q8_b.jpg", label: "Alternativa B" }
     ],
     correct: "A"
   },
   {
     id: 9,
-    question: "Em Brusque existe um lugar muito bonito, que tem uma igreja bem alta, um hospital e um museu. Como se chama?",
+    question: "Pergunta 9",
     options: [
-      { id: "A", image: "Assets/images/Pergunta9a.png", label: "Castelo de Areia da Praia." },
-      { id: "B", image: "Assets/images/Pergunta9b.png", label: "Santuário de Azambuja." }
+      { id: "A", image: "images/q9_a.jpg", label: "Alternativa A" },
+      { id: "B", image: "images/q9_b.jpg", label: "Alternativa B" }
     ],
     correct: "B"
   },
   {
     id: 10,
-    question: "Qual é o bolo docinho e cheio de farofa em cima que as famílias de Brusque adoram comer no café da tarde?",
+    question: "Pergunta 10",
     options: [
-      { id: "A", image: "Assets/images/Pergunta10a.png", label: "A Cuca" },
-      { id: "B", image: "Assets/images/Pergunta10b.png", label: "Um Hamburguer Gigante" }
+      { id: "A", image: "images/q10_a.jpg", label: "Alternativa A" },
+      { id: "B", image: "images/q10_b.jpg", label: "Alternativa B" }
     ],
     correct: "A"
   },
   {
     id: 11,
-    question: "Na época da Fenarreco, muitas pessoas comem uma comida típica muito gostosa com repolho. O que é?",
+    question: "Pergunta 11",
     options: [
-      { id: "A", image: "Assets/images/Pergunta11a.jpg", label: "Marreco recheado." },
-      { id: "B", image: "Assets/images/Pergunta11b.png", label: "Sopa de pedras." }
+      { id: "A", image: "images/q11_a.jpg", label: "Alternativa A" },
+      { id: "B", image: "images/q11_b.jpg", label: "Alternativa B" }
     ],
-    correct: "A"
+    correct: "B"
   },
   {
     id: 12,
-    question: "A cidade de Brusque foi construída por pessoas muito trabalhadoras que vieram de outro país. Uma dessas famílias eram os...",
+    question: "Pergunta 12",
     options: [
-      { id: "A", image: "Assets/images/Pergunta12a.png", label: "Alemães (e eles trouxeram músicas e comidas diferentes)." },
-      { id: "B", image: "Assets/images/Pergunta12b.png", label: "Marcianos (que vieram de Marte)." }
+      { id: "A", image: "images/q12_a.jpg", label: "Alternativa A" },
+      { id: "B", image: "images/q12_b.jpg", label: "Alternativa B" }
     ],
     correct: "A"
   },
   {
     id: 13,
-    question: "Em Brusque, tem um parque com um gramado bem grande cheio de obras de arte gigantes feitas de pedra branca. O que é?",
+    question: "Pergunta 13",
     options: [
-      { id: "A", image: "Assets/images/Pergunta13a.png", label: "O Parque das Esculturas" },
-      { id: "B", image: "Assets/images/Pergunta13b.png", label: "Uma fazenda de vacas " }
+      { id: "A", image: "images/q13_a.jpg", label: "Alternativa A" },
+      { id: "B", image: "images/q13_b.jpg", label: "Alternativa B" }
     ],
-    correct: "A"
+    correct: "B"
   },
   {
     id: 14,
-    question: "Para os carros passarem por cima do Rio Itajaí-Mirim, nós temos uma ponte bem alta e bonita, segurada por cabos fortes. Ela parece um violão gigante! Qual é?",
+    question: "Pergunta 14",
     options: [
-      { id: "A", image: "Assets/images/Pergunta14a.png", label: "A Ponte Estaiada" },
-      { id: "B", image: "Assets/images/Pergunta14b.png", label: "Uma ponte de Madeira Velha" }
+      { id: "A", image: "images/q14_a.jpg", label: "Alternativa A" },
+      { id: "B", image: "images/q14_b.jpg", label: "Alternativa B" }
     ],
     correct: "A"
   },
   {
     id: 15,
-    question: "Quem são os animaizinhos muito fofos e gordinhos que adoram pegar sol na beira do rio em Brusque?",
+    question: "Pergunta 15",
     options: [
-      { id: "A", image: "Assets/images/Pergunta15a.png", label: "As Capivaras." },
-      { id: "B", image: "Assets/images/Pergunta15b.png", label: "Os Ursos Polares" }
+      { id: "A", image: "images/q15_a.jpg", label: "Alternativa A" },
+      { id: "B", image: "images/q15_b.jpg", label: "Alternativa B" }
     ],
-    correct: "A"
+    correct: "B"
   }
 ];
+
+const rndQuestions = questions.sort(() => 0.5 - Math.random());
