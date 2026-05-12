@@ -106,8 +106,8 @@ body {
 }
 
 .star.filled {
-  color: var(--brusque-yellow);
-  text-shadow: 0 2px 8px rgba(244, 196, 48, .6);
+  color: var(--bs-success);
+  text-shadow: 0 2px 8px rgba(0, 185, 15, 0.836);
   animation: starPop .4s ease;
 }
 
