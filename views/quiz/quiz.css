@@ -1,0 +1,116 @@
+/* ===== TEXTO DA PERGUNTA (MOBILE FIRST) ===== */
+#pergunta-texto {
+  background: #27C840 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-size: .95rem;
+  line-height: 1.3;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .18);
+}
+
+/* ===== BOTÕES DE ALTERNATIVA ===== */
+.botao-opcao {
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s, border-color .2s, background .2s;
+  border-color: var(--brusque-amarelo) !important;
+}
+
+.botao-opcao:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .2) !important;
+  border-color: #198754 !important;
+}
+
+.botao-opcao.selecionado {
+  border-color: #0d6efd !important;
+  background: #cfe2ff !important;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(13, 110, 253, .3) !important;
+}
+
+.botao-opcao:disabled {
+  cursor: default;
+}
+
+.label-opcao {
+  font-size: .8rem;
+  line-height: 1.2;
+}
+
+/* ===== IMAGENS DAS ALTERNATIVAS ===== */
+.imagem-opcao {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+.imagem-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #f0f0f0, #d0d0d0);
+  border-radius: .375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #6c757d;
+}
+
+/* ===== TRANSIÇÃO ENTRE PERGUNTAS ===== */
+.quiz-conteudo.saindo {
+  animation: desliza-saindo .3s ease-in forwards;
+}
+
+.quiz-conteudo.entrando {
+  animation: desliza-entrando .3s ease-out;
+}
+
+@keyframes desliza-saindo {
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes desliza-entrando {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ===== BOTÃO PRÓXIMA (escondido até responder) ===== */
+#btn-proxima {
+  display: none;
+  background: var(--brusque-marrom);
+  color: #ffffff;
+  border: none;
+}
+
+#btn-proxima:hover {
+  background: #4e3219;
+  color: #ffffff;
+}
+
+#btn-proxima.visivel {
+  display: inline-flex;
+}
+
+/* ===== TABLET (md, ≥768px) ===== */
+@media (min-width: 768px) {
+  #pergunta-texto {
+    font-size: 1.25rem;
+    border-radius: 15px !important;
+  }
+
+  .label-opcao {
+    font-size: .875rem;
+  }
+}

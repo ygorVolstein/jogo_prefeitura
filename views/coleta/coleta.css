@@ -1,0 +1,65 @@
+/* ===== COLETA (MOBILE FIRST) ===== */
+/* Empilha label e input verticalmente em mobile */
+.coleta-row {
+  border-radius: 1rem;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.coleta-row .input-group-text {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0 !important;
+  padding: .55rem 1rem;
+  font-size: .95rem;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.coleta-row .form-control {
+  width: 100%;
+  border-radius: 0 0 1rem 1rem !important;
+  font-size: 1rem;
+  padding: .7rem 1rem;
+}
+
+.coleta-row .form-control:focus {
+  box-shadow: 0 0 0 .2rem rgba(244, 196, 48, .4);
+}
+
+/* ===== BOTÃO AVANÇAR ===== */
+.btn-avancar {
+  background: var(--brusque-marrom);
+  color: #ffffff;
+  border: none;
+}
+
+.btn-avancar:hover {
+  background: #4e3219;
+  color: #ffffff;
+}
+
+/* ===== TABLET (md, ≥768px) — layout horizontal ===== */
+@media (min-width: 768px) {
+  .coleta-row {
+    border-radius: 50rem;
+    flex-direction: row;
+  }
+
+  .coleta-row .input-group-text {
+    width: 210px;
+    min-width: 210px;
+    border-radius: 50rem 0 0 50rem !important;
+    padding-left: 1.25rem;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .coleta-row .form-control {
+    width: 1%;
+    border-radius: 0 50rem 50rem 0 !important;
+    font-size: 1.15rem;
+    padding-top: .9rem;
+    padding-bottom: .9rem;
+  }
+}
