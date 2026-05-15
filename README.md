@@ -17,7 +17,7 @@ Nesta seção, você conhece os responsáveis por esta expedição e os portais 
 ### **🔗 Portais Úteis**
 
 * **Repositório do Código (GitHub):** [Link para o repositório](https://github.com/ygorVolstein/jogo_prefeitura).  
-* **Jogue Agora (GitHub Pages):** [Link para a página publicada]((https://viniciusfernands.github.io/jogo_prefeitura/)).
+* **Jogue Agora (GitHub Pages):** [Link para a página publicada](https://viniciusfernands.github.io/jogo_prefeitura/).
 
 ## **🛠️ Organização Técnica: O Mapa da Semana**
 
